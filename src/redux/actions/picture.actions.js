@@ -1,8 +1,11 @@
 import { GET_PICTURE } from "../actionsType/picture.type";
 import axios from 'axios'
+import process from '../../next.config'
 
 
-const YOUR_ACCESS_KEY = "OkhH8j8hgxbylql_lRlDM7SwfgdZFmAN6DcvIdeqxSI"
+const AppiKey = process.env.APPI_KEY
+
+const YOUR_ACCESS_KEY = AppiKey
 
  const fetchImages = (pagina) => async dispatch => {
     const params = { page: pagina, per_page: 30};

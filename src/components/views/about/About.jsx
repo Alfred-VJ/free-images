@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from 'react-redux'
 import { actionsImgs } from '../../../redux/actions/picture.actions'
 import Buttons from '../../buttons/Buttons'
 import CardPage from '../../Cards/Cards.page'
+import CardPageDown from '../../Cards/Cards.pageDown'
 
 import '../../styles/About.css'
 
@@ -41,6 +42,7 @@ const About = () => {
           ))}
         </div>
       </div>
+      <CardPageDown page={pagina}/>
       <Buttons />
     </>
   )

@@ -1,0 +1,25 @@
+/* archivo Button.css */
+
+.container_button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* para asegurar que el botón esté en el centro de la pantalla */
+  }
+  
+.cool-button {
+    background-color: #3498db; /* color azul */
+    color: #fff; /* color blanco */
+    border-radius: 10px; /* bordes redondeados */
+    padding: 10px 20px; /* espaciado entre el texto y los bordes */
+    font-size: 18px; /* tamaño de la letra */
+    text-decoration: none; /* quita el subrayado del enlace */
+    transition: all 0.2s ease-in-out; /* efecto suave al pasar el cursor */
+  }
+  
+  .cool-button:hover {
+    background-color: #2980b9; /* color azul oscuro al pasar el cursor */
+    transform: scale(1.1); /* aumenta el tamaño al pasar el cursor */
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.3); /* sombra alrededor del botón */
+  }
+  

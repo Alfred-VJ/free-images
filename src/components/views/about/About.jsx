@@ -2,6 +2,7 @@ import { useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { actionsImgs } from '../../../redux/actions/picture.actions'
 import Buttons from '../../buttons/Buttons'
+import CardPage from '../../Cards/Cards.page'
 
 import '../../styles/About.css'
 
@@ -26,6 +27,7 @@ const About = () => {
     <>
       <Buttons />
       <div className='grid-container'>
+        <CardPage page={pagina}/>
         <div className="grid">
           {images?.map((image, index) => (
             <div key={index} className="grid-item">

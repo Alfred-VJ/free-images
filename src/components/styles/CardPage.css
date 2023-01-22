@@ -1,0 +1,66 @@
+/* archivo Card.css */
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 0 15px 0;
+  }
+  
+  .card {
+    width: 150px;
+    background-color: rgba(255, 255, 255, 0.13); /* casi totalmente transparente */
+    padding: 10px;
+    border-radius: 55px 55px 0 0;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+    text-align: center;
+    animation: background-animation 5s ease-in-out infinite; /* animación de fondo*/
+  }
+  
+  .card-title {
+    font-size: 18px;
+    color: #fdfdfd;
+    margin-bottom: 10px;
+  }
+  
+  .card-number {
+    font-size: 24px;
+    color: #2980b9;
+    animation: fire-animation 1s ease-in-out infinite; /* animación de fuego */
+  }
+  
+  /* regla de animación personalizada */
+  @keyframes fire-animation {
+    0% {
+      color: #ffa600; /* color amarillo */
+      transform: scale(1); /* tamaño normal */
+    }
+    50% {
+      color: #ff5c33; /* color naranja */
+      transform: scale(1.2); /* aumenta el tamaño */
+    }
+    100% {
+      color: #ffa600; /* color amarillo */
+      transform: scale(1); /* tamaño normal */
+    }
+  }
+  
+
+  /* regla de animación personalizada */
+@keyframes background-animation {
+    0% {
+      background-color: #ff00b307; /* color amarillo */
+    }
+    25% {
+      background-color: #fcff3307; /* color naranja */
+    }
+    50% {
+      background-color: #34db500a; /* color azul */
+    }
+    75% {
+      background-color: #4f29b90a; /* color azul oscuro */
+    }
+    100% {
+      background-color: #ff000005; /* color amarillo */
+    }
+  }

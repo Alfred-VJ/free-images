@@ -4,20 +4,38 @@ import { actionsImgs } from '../../../redux/actions/picture.actions'
 import Buttons from '../../buttons/Buttons'
 import CardPage from '../../Cards/Cards.page'
 import CardPageDown from '../../Cards/Cards.pageDown'
-
+import { useLocation } from 'react-router-dom';
 import '../../styles/About.css'
 
 const About = () => {
   const { images } = useSelector(state => state.imgReducer)
   const {pagina} = useSelector(state => state.buttReducer)
 
-
+  // let location = useLocation()
   const dispatch = useDispatch()
+
+  // useEffect(() => {
+  //  if(location.pathname === window.location.pathname){
+  //   window.location.replace('/');
+  //  }
+  // }, [location])
+
+  useEffect(() => {
+    window.addEventListener('beforeunload', handleUnload);
+    return () => {
+      window.removeEventListener('beforeunload', handleUnload);
+    };
+  }, []);
+
+  function handleUnload(e) {
+    // Aquí puedes colocar la lógica para redirigir al usuario a una ruta específica
+    window.location.replace('/');
+  }
 
   useEffect(() => {
     dispatch(actionsImgs.fetchImages(pagina))
   }, [pagina])
-  console.log({ pagina })
+  console.log({ images })
 
 
   const handleClick = (image) => {

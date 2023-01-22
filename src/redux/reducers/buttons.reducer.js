@@ -1,7 +1,7 @@
 import { NEXT_BEFORE } from "../actionsType/buttons.type"
 
 const initialState = {
-    pagina: 1
+    pagina: 47
   }
   
   const buttReducer = (state = initialState, action) => {
